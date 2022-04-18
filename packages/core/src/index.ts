@@ -12,6 +12,8 @@ export * from "./loader"
 export * from "./selectDeltas"
 export * from "./store"
 export * from "./query"
+export * from "./pick"
+export * from "./util/diff"
 
 export type Primitive = boolean | number | string | symbol | null | undefined
 
