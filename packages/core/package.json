@@ -37,5 +37,8 @@
   "homepage": "https://github.com/jeremybanka/corners#readme",
   "bugs": {
     "url": "https://github.com/jeremybanka/luum/issues"
+  },
+  "devDependencies": {
+    "@eyecuelab/json-api-tools": "^0.1.0"
   }
 }

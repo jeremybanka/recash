@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@eyecuelab/json-api-tools@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@eyecuelab/json-api-tools/-/json-api-tools-0.1.0.tgz#c536ac11f12b055ecbdf3c9ac8f4b10fa45faec0"
+  integrity sha512-7s//TmVM4MqwgcGU6wmfKgPxjMLY3CySI8iLr2OZWm/SAFAoIcdXkrRwNy/rxz1npHnDFA96PoypGEeLnEttvw==
+
 hamt_plus@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/hamt_plus/-/hamt_plus-1.0.2.tgz#e21c252968c7e33b20f6a1b094cd85787a265601"
