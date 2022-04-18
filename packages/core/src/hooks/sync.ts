@@ -85,7 +85,6 @@ export const useSync = <
   const [state, set] = useRecoilState(cache.findState(id))
   const { outbound, inbound } = useDelta({ cache, id })
 
-  // @ts-expect-error "not all code paths return a value": yes I know
   useEffect(() => {
     if (every && state) {
       const timing = parseTimeAmount(every)
@@ -98,6 +97,7 @@ export const useSync = <
       }, timing)
       return () => clearInterval(interval)
     }
+    return undefined
   }, [every, push])
 
   const getState: Getter<T> =

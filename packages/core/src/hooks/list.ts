@@ -132,7 +132,6 @@ export const useList = <T, QUERY_OUTPUT>(
     })
   }
 
-  // @ts-expect-error "not all code paths return a value" -- this is intentional
   useEffect(() => {
     if (every) {
       const timing = parseTimeAmount(every)
@@ -141,6 +140,7 @@ export const useList = <T, QUERY_OUTPUT>(
       }, timing)
       return () => clearInterval(interval)
     }
+    return undefined
   }, [pull, every])
 
   const filler = cache.defaults?.empty
