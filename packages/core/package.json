@@ -1,0 +1,41 @@
+{
+  "name": "@recash/core",
+  "version": "0.1.0",
+  "private": false,
+  "main": "dist/index.js",
+  "types": "src/index.ts",
+  "scripts": {
+    "dev": "esbuild example/client.tsx --outfile=example/web/client.js --servedir=example/web --serve=3001 --bundle --minify --sourcemap",
+    "build:example": "esbuild example/client.tsx --outfile=example/web/client.js --bundle --minify --sourcemap",
+    "predeploy": "yarn build:example",
+    "deploy": "gh-pages -d example/web",
+    "build": "node ./esbuild.config.js",
+    "test": "jest --watch --no-coverage",
+    "test:cov": "jest --watch",
+    "test:once": "jest",
+    "lint": "eslint \"{src,test}/**/*.ts{,x}\"",
+    "lint:fix": "yarn lint -- --fix"
+  },
+  "dependencies": {
+    "recoil": "^0.7.2"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.0",
+    "react-dom": ">=17.0.0"
+  },
+  "lint-staged": {
+    "*.ts{,x}": "yarn lint"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@banka/react"
+    ],
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    }
+  },
+  "homepage": "https://github.com/jeremybanka/corners#readme",
+  "bugs": {
+    "url": "https://github.com/jeremybanka/luum/issues"
+  }
+}
