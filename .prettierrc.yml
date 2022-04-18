@@ -5,7 +5,7 @@ semi: false
 singleQuote: false
 quoteProps: "consistent"
 jsxSingleQuote: false
-trailingComma: "es5"
+trailingComma: true
 bracketSpacing: true
 bracketSameLine: false
 arrowParens: "always"
