@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
     "noEmit": true,
+    "jsx": "react-jsx",
+    "types": ["vite/client", "jest"],
     "declaration": true,
     "declarationMap": true,
     "emitDecoratorMetadata": true,
@@ -8,7 +10,8 @@
     "experimentalDecorators": true,
     "incremental": false,
     "lib": ["esnext", "dom", "dom.iterable"],
-    "module": "CommonJS",
+    "module": "esnext",
+    "moduleResolution": "node",
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
@@ -22,4 +25,5 @@
     "strictNullChecks": true,
     "target": "ES6"
   }
+  // "exclude": ["./example"]
 }

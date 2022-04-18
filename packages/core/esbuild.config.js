@@ -7,6 +7,6 @@ require(`esbuild`)
     format: `cjs`,
     sourcemap: true,
     bundle: true,
-    external: [`react`],
+    external: [`react`, `recoil`],
   })
   .catch(() => process.exit(1))
