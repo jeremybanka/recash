@@ -14,7 +14,7 @@ export const pickState = <T extends JsonObj, KEY extends keyof T>(
   key: KEY,
 ): RecoilStateFamily<T[KEY], string> =>
   selectorFamily<T[KEY], string>({
-    key: `${cache.key}-${key}`,
+    key: `${cache.key}-${String(key)}`,
     get:
       (id) =>
       ({ get }) => {
@@ -45,7 +45,7 @@ export const pickAttribute = <
   key: KEY,
 ): RecoilStateFamily<RESOURCE_OBJ[`attributes`][KEY], string> =>
   selectorFamily<RESOURCE_OBJ[`attributes`][KEY], string>({
-    key: `${cache.key}-attr-${key}`,
+    key: `${cache.key}-attr-${String(key)}`,
     get:
       (id) =>
       ({ get }) => {
@@ -58,13 +58,12 @@ export const pickAttribute = <
       },
     set:
       (id) =>
-      (
-        { set, reset },
-        value: DefaultValue | RESOURCE_OBJ[`attributes`][KEY],
-      ) => {
+      ({ set }, value: DefaultValue | RESOURCE_OBJ[`attributes`][KEY]) => {
         const state = cache.findState(id)
         if (value instanceof DefaultValue) {
-          return
+          return console.warn(
+            `invalid reset on picked attribute ${String(key)} in ${cache.key}`,
+          )
         }
         set(state, (current) =>
           current

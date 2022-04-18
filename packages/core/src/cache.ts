@@ -1,7 +1,7 @@
-import { atomFamily, DefaultValue, selector, selectorFamily } from "recoil"
+import { atomFamily, DefaultValue, selectorFamily } from "recoil"
 
 import type { ID, IdAccessor, RecoilStateFamily, RecoilValueFamily } from "."
-import type { SortsAndFilters, PageMeta, Page } from "./hooks/list"
+import type { SortsAndFilters, PageMeta } from "./hooks/list"
 import type { Indexer } from "./indexer"
 import { buildIndexer } from "./indexer"
 import type { Loader } from "./loader"

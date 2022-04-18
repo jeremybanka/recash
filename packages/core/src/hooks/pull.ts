@@ -1,4 +1,3 @@
-import type { OutputToState } from "."
 import type { Cache, ID } from ".."
 import { USE_LOAD } from "../cache"
 import type { LoadPolicy } from "../loader"

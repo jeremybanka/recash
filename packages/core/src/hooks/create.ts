@@ -1,5 +1,5 @@
 import type { OutputToState, StateToInput } from "."
-import type { Cache, ID } from ".."
+import type { Cache } from ".."
 import { USE_LOAD } from "../cache"
 
 export type CreateOptions<T, QI = T, QO = T> = {

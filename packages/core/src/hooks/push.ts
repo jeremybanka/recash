@@ -1,5 +1,5 @@
 import type { Voidable } from "."
-import type { Cache, ID } from ".."
+import type { Cache } from ".."
 import { USE_LOAD } from "../cache"
 import type { Delta } from "../util/diff"
 

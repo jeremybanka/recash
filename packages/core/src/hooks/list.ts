@@ -35,9 +35,6 @@ export type Cursor = {
   last?: string
 }
 
-const isIncomplete = (values: unknown[]) =>
-  values === undefined || values.includes(undefined) || values.length === 0
-
 export type ListOptions<T, OUTPUT> = {
   cache: Cache<T>
   query: ListQuery<OUTPUT>
@@ -135,6 +132,7 @@ export const useList = <T, QUERY_OUTPUT>(
     })
   }
 
+  // @ts-expect-error "not all code paths return a value" -- this is intentional
   useEffect(() => {
     if (every) {
       const timing = parseTimeAmount(every)
