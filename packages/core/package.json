@@ -16,12 +16,14 @@
     "lint": "eslint \"{src,test}/**/*.ts{,x}\"",
     "lint:fix": "yarn lint -- --fix"
   },
-  "dependencies": {
-    "recoil": "^0.7.2"
-  },
   "peerDependencies": {
     "react": ">=17.0.0",
-    "react-dom": ">=17.0.0"
+    "react-dom": ">=17.0.0",
+    "recoil": "^0.7.2"
+  },
+  "devDependencies": {
+    "@eyecuelab/json-api-tools": "^0.1.0",
+    "recoil": "^0.7.2"
   },
   "lint-staged": {
     "*.ts{,x}": "yarn lint"
@@ -34,11 +36,8 @@
       "project": "./tsconfig.json"
     }
   },
-  "homepage": "https://github.com/jeremybanka/corners#readme",
+  "homepage": "https://github.com/jeremybanka/recash#readme",
   "bugs": {
-    "url": "https://github.com/jeremybanka/luum/issues"
-  },
-  "devDependencies": {
-    "@eyecuelab/json-api-tools": "^0.1.0"
+    "url": "https://github.com/jeremybanka/recash/issues"
   }
 }
